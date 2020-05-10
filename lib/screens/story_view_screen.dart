@@ -20,7 +20,51 @@ class _MoreStoriesState extends State<MoreStories> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("More"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            onPressed: null,
+          )
+        ],
+        backgroundColor: Colors.black54,
+        elevation: 0.0,
+        title: Image.asset(
+          'assets/images/logo.png',
+          height: 120,
+          width: 150,
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('School'),
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.black26,
+              ),
+            ),
+            ListTile(
+              title: Text('Assignment'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                // Then close the drawer.
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Events'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                // Then close the drawer.
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
       ),
       body: StoryView(
         storyItems: [

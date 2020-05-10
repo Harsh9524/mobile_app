@@ -36,8 +36,8 @@ class MyHomePage extends StatelessWidget {
         elevation: 0.0,
         title: Image.asset(
           'assets/images/logo.png',
-          height: 100,
-          width: 200,
+          height: 120,
+          width: 150,
         ),
       ),
       drawer: Drawer(
@@ -71,6 +71,88 @@ class MyHomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      body: ListView(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    print('Card tapped.');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text('Stories here'),
+                  ),
+                ),
+              ),
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    print('Card tapped.');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text('Progress Report here'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    print('Card tapped.');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text('Upcoming Events'),
+                  ),
+                ),
+              ),
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    print('Card tapped.');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text('Live Session'),
+                  ),
+                ),
+              ),
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    print('Card tapped.');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text('Assignments'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        child: Icon(Icons.chat_bubble),
+        backgroundColor: Colors.green,
       ),
     );
   }

@@ -26,6 +26,12 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            onPressed: null,
+          )
+        ],
         backgroundColor: Colors.black54,
         elevation: 0.0,
         title: Image.asset(
@@ -47,8 +53,6 @@ class MyHomePage extends StatelessWidget {
             ),
             ListTile(
               title: Text('Assignment'),
-              
-
               onTap: () {
                 // Update the state of the app.
                 // ...

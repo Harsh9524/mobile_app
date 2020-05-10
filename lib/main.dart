@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/story_view_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -9,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         //
@@ -82,7 +85,10 @@ class MyHomePage extends StatelessWidget {
                 child: InkWell(
                   splashColor: Colors.blue.withAlpha(30),
                   onTap: () {
-                    print('Card tapped.');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MoreStories()),
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.all(20),
@@ -144,7 +150,6 @@ class MyHomePage extends StatelessWidget {
               ),
             ],
           ),
-        
         ],
       ),
       floatingActionButton: FloatingActionButton(
